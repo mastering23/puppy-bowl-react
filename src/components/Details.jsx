@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Details = () => {
   return (
-    <div>Details</div>
+   <h1>DETAILS COMPONENT IS WORKING</h1>
   )
 }

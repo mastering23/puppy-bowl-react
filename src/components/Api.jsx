@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const Api = () => {
   const [item, setItem] = useState([]);
+  const navigate = useNavigate();
 
   const getApiData = async () => {
     const res = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2501-FTB-ET-WEB-FT/players`);
@@ -22,6 +24,7 @@ export const Api = () => {
           <li key={index}>
             Name : {singlePuppy.name} <br /> Breed : {singlePuppy.breed}
             <br />
+            <button onClick={() => navigate('/details', { state: singlePuppy})}>See more details</button>  
            <hr />
           </li>
         ))}
