@@ -16,10 +16,13 @@ export const Api = () => {
 
   return (
     <>
+    <center><h1>Puppy List</h1></center>
       <ol>
         {item.map((singlePuppy, index) => (
           <li key={index}>
-            {singlePuppy.name} - {singlePuppy.breed}
+            Name : {singlePuppy.name} <br /> Breed : {singlePuppy.breed}
+            <br />
+           <hr />
           </li>
         ))}
       </ol>
