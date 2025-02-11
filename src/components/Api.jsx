@@ -22,7 +22,8 @@ export const Api = () => {
       <ol>
         {item.map((singlePuppy, index) => (
           <li key={index}>
-            Name : {singlePuppy.name} <br /> Breed : {singlePuppy.breed}
+            Name : {singlePuppy.name}
+            <br />
             <br />
             <button onClick={() => navigate('/details', { state: singlePuppy})}>See more details</button>  
            <hr />
