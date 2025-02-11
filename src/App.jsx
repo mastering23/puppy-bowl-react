@@ -2,6 +2,7 @@ import React from 'react';
 import {Routes,Route} from 'react-router-dom'
 import { Api } from './components/Api';
 import './index.css';
+import { Details } from './components/Details';
 
 const App = () =>{
 
@@ -9,8 +10,8 @@ const App = () =>{
   return (
     <>
     <Routes>
-    <Route  path ="/" element={<Api />} /> 
-
+    <Route  path ="/api" element={<Api />} />
+    <Route  path ="/details" element={<Details />} />
     </Routes>
 
     </>
