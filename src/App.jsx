@@ -1,4 +1,6 @@
-
+import React from 'react';
+import {Routes,Route} from 'react-router-dom'
+import { Api } from './components/Api';
 import './index.css';
 
 const App = () =>{
@@ -6,7 +8,11 @@ const App = () =>{
 
   return (
     <>
-    <h1>TESTING</h1>
+    <Routes>
+    <Route  path ="/" element={<Api />} /> 
+
+    </Routes>
+
     </>
   )
 }
