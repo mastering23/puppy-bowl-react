@@ -9,8 +9,7 @@ const App = () =>{
   return (
     <>
     <Routes>
-    <Route  path ="/" element={<Api />} /> 
-
+    <Route  path ="/api" element={<Api />} />
     </Routes>
 
     </>
