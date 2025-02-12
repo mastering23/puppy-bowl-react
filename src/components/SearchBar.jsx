@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 export const SearchBar = () => {
-  const [search, setSearch] = useState('');  // State for search input
-  const [storeData, setStoreData] = useState([]);  // State for original data
-  const [filteredData, setFilteredData] = useState([]);  // State for filtered data
+  const [search, setSearch] = useState('');  
+  const [storeData, setStoreData] = useState([]); 
+  const [filteredData, setFilteredData] = useState([]);
 
-  // Fetch data from API
   const getData = async () => {
     try {
       const res = await fetch('https://fsa-puppy-bowl.herokuapp.com/api/2501-FTB-ET-WEB-FT/players');
@@ -21,14 +20,15 @@ export const SearchBar = () => {
     getData(); 
   }, []);
 
-
+  
   const searchKick = (event) => {
     const query = event.target.value.toLowerCase();
     setSearch(query);
 
-
+   
     const filteredResults = storeData.filter(item => item.name.toLowerCase().includes(query));
     setFilteredData(filteredResults);  
+  };
 
   return (
     <>
@@ -49,4 +49,4 @@ export const SearchBar = () => {
       <br />
     </>
   );
-};}
+};
